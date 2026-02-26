@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Health Risk Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h2>Advanced Digital Health Risk Assessment</h2>
+
+<form action="/predict" method="POST">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>Age</label>
+<input type="number" name="age" min="1" required>
+
+<label>Gender</label>
+<select name="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<label>Height (cm)</label>
+<input type="number" name="height" min="50" required>
+
+<label>Weight (kg)</label>
+<input type="number" name="weight" min="10" required>
+
+<label>Systolic Blood Pressure</label>
+<input type="number" name="bp" min="60" required>
+
+<label>Existing Medical Condition</label>
+<select name="condition">
+<option>None</option>
+<option>Diabetes</option>
+<option>Hypertension</option>
+<option>Heart Disease</option>
+<option>Asthma</option>
+<option>Thyroid</option>
+<option>Kidney Problem</option>
+<option>Liver Problem</option>
+<option>High Cholesterol</option>
+<option>Obesity</option>
+</select>
+
+<label>Ongoing Treatment</label>
+<select name="treatment">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<h3>Select Symptoms</h3>
+
+<div class="symptoms-grid">
+<label><input type="checkbox" name="symptoms" value="Chest Pain"> Chest Pain</label>
+<label><input type="checkbox" name="symptoms" value="Headache"> Headache</label>
+<label><input type="checkbox" name="symptoms" value="Fever"> Fever</label>
+<label><input type="checkbox" name="symptoms" value="Cough"> Cough</label>
+<label><input type="checkbox" name="symptoms" value="Cold"> Cold</label>
+<label><input type="checkbox" name="symptoms" value="Breathing Difficulty"> Breathing Difficulty</label>
+<label><input type="checkbox" name="symptoms" value="Stomach Pain"> Stomach Pain</label>
+<label><input type="checkbox" name="symptoms" value="Diarrhea"> Diarrhea</label>
+<label><input type="checkbox" name="symptoms" value="Vomiting"> Vomiting</label>
+<label><input type="checkbox" name="symptoms" value="Dizziness"> Dizziness</label>
+<label><input type="checkbox" name="symptoms" value="Fatigue"> Fatigue</label>
+<label><input type="checkbox" name="symptoms" value="Back Pain"> Back Pain</label>
+<label><input type="checkbox" name="symptoms" value="Joint Pain"> Joint Pain</label>
+<label><input type="checkbox" name="symptoms" value="Throat Pain"> Throat Pain</label>
+<label><input type="checkbox" name="symptoms" value="High Sugar"> High Sugar</label>
+<label><input type="checkbox" name="symptoms" value="Low Sugar"> Low Sugar</label>
+<label><input type="checkbox" name="symptoms" value="Skin Rash"> Skin Rash</label>
+<label><input type="checkbox" name="symptoms" value="Anxiety"> Anxiety</label>
+<label><input type="checkbox" name="symptoms" value="Depression"> Depression</label>
+<label><input type="checkbox" name="symptoms" value="Sleep Problem"> Sleep Problem</label>
+</div>
+
+<label>Other Symptoms</label>
+<input type="text" name="other_symptom">
+
+<button type="submit">Assess Health Risk</button>
+
+</form>
+</div>
+
+</body>
+</html>

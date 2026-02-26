@@ -1,2 +1,3 @@
 # health-risk-assessment-system
-A web-based health risk assessment system built using Flask, HTML and CSS.
+This is a web-based health risk assessment system built using Flask, HTML, and CSS. 
+It analyzes user symptoms, BMI, blood pressure, and provides health suggestions.
